@@ -5,10 +5,10 @@ import cv2 as cv
 id_names = pd.read_csv('id-names.csv')
 id_names = id_names[['id', 'name']]
 
-faceClassifier = cv.CascadeClassifier('C:\\Users\\oscar\\OneDrive\\Desktop\\Door AI new\\Face-Recognition-with-OpenCV\\Classifiers\\haarface.xml')
+faceClassifier = cv.CascadeClassifier('home/acm/Door.Ai/Face-Recognition-with-OpenCV/Classifiers/haarface.xml')
 
 lbph = cv.face.LBPHFaceRecognizer_create(threshold=500)
-lbph.read('C:\\Users\\oscar\\OneDrive\\Desktop\\Door AI new\\Face-Recognition-with-OpenCV\\Classifiers\\trainedmode.xml')
+lbph.read('home/acm/Door.Ai/Face-Recognition-with-OpenCV/Classifiers/trainedmode.xml')
 
 camera = cv.VideoCapture(0)
 count = 0
